@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2012 Alvin R. de Leon. All Rights Reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+
+  <groupId>org.piraso</groupId>
+  <artifactId>piraso-client-pom</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>piraso-client-pom</name>
+  <url>http://www.piraso.org/</url>
+
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Alvin R. de Leon</name>
+      <email>alvinrdeleon@me.com</email>
+    </developer>
+  </developers>
+
+  <distributionManagement>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:https://github.com/piraso/piraso-client-pom.git</connection>
+    <url>scm:git:https://github.com/piraso/piraso-client-pom.git</url>
+    <developerConnection>scm:git:https://github.com/piraso/piraso-client-pom.git</developerConnection>
+  </scm>
+
+  <repositories>
+    <repository>
+      <id>netbeans</id>
+      <name>NetBeans</name>
+      <url>http://bits.netbeans.org/maven2/</url>
+    </repository>
+  </repositories>
+
+  <properties>
+    <brandingToken>piraso_client</brandingToken>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <opencsv.version>2.0</opencsv.version>
+    <junit.version>4.8.1</junit.version>
+    <mokito.version>1.8.4</mokito.version>
+    <junit.dep.version>4.5</junit.dep.version>
+    <netbeans.version>RELEASE721</netbeans.version>
+    <commons.io>2.4</commons.io>
+    <swing-layout.version>1.0.3</swing-layout.version>
+
+    <commons.collection.version>3.2.1</commons.collection.version>
+    <piraso.version>1.1-SNAPSHOT</piraso.version>
+    <piraso.client.branding.version>1.0-SNAPSHOT</piraso.client.branding.version>
+    <piraso.client.base.version>1.0-SNAPSHOT</piraso.client.base.version>
+    <piraso.client.api.version>1.0-SNAPSHOT</piraso.client.api.version>
+    <piraso.client.sql.version>1.1-SNAPSHOT</piraso.client.sql.version>
+    <piraso.client.log4j.version>1.1-SNAPSHOT</piraso.client.log4j.version>
+    <piraso.client.spring.version>1.1-SNAPSHOT</piraso.client.spring.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>${mokito.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit-dep</artifactId>
+      <version>${junit.dep.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.piraso</groupId>
+      <artifactId>context-logger-api</artifactId>
+      <version>${piraso.version}</version>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>nbm-maven-plugin</artifactId>
+          <version>3.7</version>
+          <extensions>true</extensions>
+          <configuration>
+            <brandingToken>${brandingToken}</brandingToken>
+            <cluster>${brandingToken}</cluster>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.3.2</version>
+          <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>2.3.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
