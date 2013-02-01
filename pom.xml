@@ -29,7 +29,7 @@
 
   <groupId>org.piraso</groupId>
   <artifactId>piraso-client-pom</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>piraso-client-pom</name>
   <url>http://www.piraso.org/</url>
@@ -88,13 +88,13 @@
 
     <commons.collection.version>3.2.1</commons.collection.version>
     <piraso.version>1.1-SNAPSHOT</piraso.version>
-    <piraso.client.branding.version>1.0-SNAPSHOT</piraso.client.branding.version>
-    <piraso.client.base.version>1.0-SNAPSHOT</piraso.client.base.version>
-    <piraso.client.api.version>1.0-SNAPSHOT</piraso.client.api.version>
+    <piraso.client.branding.version>1.1-SNAPSHOT</piraso.client.branding.version>
+    <piraso.client.base.version>1.1-SNAPSHOT</piraso.client.base.version>
+    <piraso.client.api.version>1.1-SNAPSHOT</piraso.client.api.version>
     <piraso.client.sql.version>1.1-SNAPSHOT</piraso.client.sql.version>
     <piraso.client.log4j.version>1.1-SNAPSHOT</piraso.client.log4j.version>
     <piraso.client.spring.version>1.1-SNAPSHOT</piraso.client.spring.version>
-    <piraso.client.jsprinbot.version>1.0-SNAPSHOT</piraso.client.jsprinbot.version>
+    <piraso.client.jspringbot.version>1.1-SNAPSHOT</piraso.client.jspringbot.version>
   </properties>
 
   <dependencies>
