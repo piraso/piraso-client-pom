@@ -82,7 +82,7 @@
     <junit.version>4.8.1</junit.version>
     <mokito.version>1.8.4</mokito.version>
     <junit.dep.version>4.5</junit.dep.version>
-    <netbeans.version>RELEASE721</netbeans.version>
+    <netbeans.version>RELEASE731</netbeans.version>
     <commons.io>2.4</commons.io>
     <swing-layout.version>1.0.3</swing-layout.version>
 
@@ -131,7 +131,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>nbm-maven-plugin</artifactId>
-          <version>3.7</version>
+          <version>3.14.1</version>
           <extensions>true</extensions>
           <configuration>
             <brandingToken>${brandingToken}</brandingToken>
